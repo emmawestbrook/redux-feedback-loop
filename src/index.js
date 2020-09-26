@@ -6,8 +6,23 @@ import registerServiceWorker from './registerServiceWorker';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 
+let initalState = {
+    feeling: null,
+    understanding: null,
+    support: null,
+    comment: ''
+};
 
-const feedbackReducer = (state = [], action) => {
+
+const feedbackReducer = (state = initalState, action) => {
+    if (action.type === "SET_FEELING") {
+        let newState = {
+            ...state,
+            feeling: action.payload
+        }
+        console.log("in feedbackReducer", newState);
+        return newState;
+    }
     return state;
 };
 
