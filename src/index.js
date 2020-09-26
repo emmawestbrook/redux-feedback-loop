@@ -23,6 +23,14 @@ const feedbackReducer = (state = initalState, action) => {
         console.log("in feedbackReducer", newState);
         return newState;
     }
+    if (action.type === "SET_UNDERSTANDING") {
+        let newState = {
+            ...state,
+            understanding: action.payload
+        }
+        console.log("in feedbackReducer", newState);
+        return newState;
+    }
     return state;
 };
 
