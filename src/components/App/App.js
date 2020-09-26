@@ -15,7 +15,9 @@ import Review from '../Review/Review';
 
 class App extends Component {
 
-
+  //This number change is triggered each time the components with 1-5 rating systems 
+  // have a change to their input value. A button or message then renders on the page
+  //dependant on the inRange key of its local state.
   numberChange = (key, num) => {
     let number = Number(num);
     if (number > 0 && number < 6) {
