@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+
 
 
 class Review extends Component {
@@ -9,10 +11,20 @@ class Review extends Component {
     render() {
         return (
             <div >
+                <br />
+                <br />
+                <br />
 
-                <button type="submit" onClick={this.handleSubmit}>new feedback</button>
+                <Button size="large"
+                    className="homeButton"
+                    variant="contained"
+                    color="primary"
+                    type="submit"
+                    onClick={this.handleSubmit}>
+                    new feedback
+                </Button>
 
-            </div>
+            </div >
         );
     }
 }

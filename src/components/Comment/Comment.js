@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from "react-redux";
+import Button from '@material-ui/core/Button';
 
 class Comment extends Component {
     state = {
@@ -28,7 +29,8 @@ class Comment extends Component {
                 <input type="tezt" placeholder="let us know!"
                     onChange={(event) => this.handleChange('comment', event)}></input>
                 <br />
-                <button type="submit" onClick={this.handleSubmit}>next</button>
+                <br />
+                <Button variant="contained" color="primary" type="submit" onClick={this.handleSubmit}>next</Button>
 
             </div>
         );

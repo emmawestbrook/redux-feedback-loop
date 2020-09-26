@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { connect } from "react-redux";
-
+import Button from '@material-ui/core/Button';
 import axios from "axios";
 
 
@@ -33,7 +33,7 @@ class Review extends Component {
                 <Link to="/support"><h3>support: {this.props.feedback.support}/5</h3></Link>
                 <Link to="/comment"><h3>comment: {this.props.feedback.comment}</h3></Link>
 
-                <button type="submit" onClick={this.handleSubmit}>submit</button>
+                <Button variant="contained" color="secondary" type="submit" onClick={this.handleSubmit}>submit</Button>
             </div>
         );
     }

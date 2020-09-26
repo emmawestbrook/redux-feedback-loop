@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 import ReactDOM from 'react-dom';
-//import Button from '@material-ui/core/Button';
 import { Route, HashRouter as Router, Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 
-
+//importing all the other components!
 import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
