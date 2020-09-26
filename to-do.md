@@ -39,11 +39,11 @@ Four Routes/Views
     x Next button sends to next form
 ### Review
     x Make Route
-    - Render all feedback information form redux state
-    - Submit button sends all info to database via axios POST and empties redux state
+    x Render all feedback information form redux state
+    x Submit button sends all info to database via axios POST and empties redux state
 ### Submission success page
-    - Thank you message
-    - Button that sends back to the first landing page
+    x Thank you message
+    x Button that sends back to the first landing page
 
 
 

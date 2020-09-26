@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { connect } from "react-redux";
+
 import axios from "axios";
 
 
 class Review extends Component {
+
     handleSubmit = () => {
         alert("thanks for your feedback!");
         axios({
@@ -25,13 +27,13 @@ class Review extends Component {
         return (
             <div >
                 <h1>review your feedback</h1>
-                <h3>feeling: {this.props.feedback.feeling}/5</h3>
-                <h3>understanding: {this.props.feedback.understanding}/5</h3>
-                <h3>support: {this.props.feedback.support}/5</h3>
-                <h3>comment: {this.props.feedback.comment}</h3>
+                <p>click a score to change it</p>
+                <Link to="/feeling"><h3>feeling: {this.props.feedback.feeling}/5</h3></Link>
+                <Link to="/understanding"><h3>understanding: {this.props.feedback.understanding}/5</h3></Link>
+                <Link to="/support"><h3>support: {this.props.feedback.support}/5</h3></Link>
+                <Link to="/comment"><h3>comment: {this.props.feedback.comment}</h3></Link>
 
                 <button type="submit" onClick={this.handleSubmit}>submit</button>
-
             </div>
         );
     }
