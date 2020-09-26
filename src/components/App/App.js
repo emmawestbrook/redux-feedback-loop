@@ -12,6 +12,7 @@ import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comment from '../Comment/Comment';
 import Review from '../Review/Review';
+import Home from '../Home/Home';
 
 class App extends Component {
 
@@ -45,8 +46,8 @@ class App extends Component {
             <h4><i>Don't forget it!</i></h4>
           </header>
           <main>
-            <Route path="/#/" exact>
-              <App />
+            <Route path="/" exact>
+              <Home />
             </Route>
 
             <Route path="/feeling">
