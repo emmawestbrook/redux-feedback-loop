@@ -47,12 +47,15 @@ const feedbackReducer = (state = initalState, action) => {
         console.log("in feedbackReducer", newState);
         return newState;
     }
+    if (action.type === "RESET_STATE") {
+        return initalState;
+    }
     return state;
 };
 
 const store = createStore(
     combineReducers({
-        feedback: feedbackReducer
+        feedbackReducer
     })
 );
 
