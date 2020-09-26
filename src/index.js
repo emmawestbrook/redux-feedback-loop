@@ -31,6 +31,22 @@ const feedbackReducer = (state = initalState, action) => {
         console.log("in feedbackReducer", newState);
         return newState;
     }
+    if (action.type === "SET_SUPPORT") {
+        let newState = {
+            ...state,
+            support: action.payload
+        }
+        console.log("in feedbackReducer", newState);
+        return newState;
+    }
+    if (action.type === "SET_COMMENT") {
+        let newState = {
+            ...state,
+            comment: action.payload
+        }
+        console.log("in feedbackReducer", newState);
+        return newState;
+    }
     return state;
 };
 
