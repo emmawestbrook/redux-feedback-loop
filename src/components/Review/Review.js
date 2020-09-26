@@ -3,13 +3,12 @@ import { withRouter, Link } from 'react-router-dom';
 import { connect } from "react-redux";
 import Button from '@material-ui/core/Button';
 import axios from "axios";
-import { CardActions, CardContent, Paper, TextField } from '@material-ui/core';
-import { Card } from '@material-ui/core';
+import { Paper } from '@material-ui/core';
+
 
 class Review extends Component {
 
     handleSubmit = () => {
-        alert("thanks for your feedback!");
         axios({
             method: "POST",
             url: "/feedback",
@@ -26,7 +25,9 @@ class Review extends Component {
     }
     handleClick = (route) => {
         this.props.history.push(route);
+
     }
+
     render() {
         return (
             <div className="reviewDiv">
