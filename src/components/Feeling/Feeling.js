@@ -10,24 +10,11 @@ class Feeling extends Component {
         inRange: false
     };
 
+
     handleChange = (key, event) => {
-        let number = Number(event.target.value);
-        if (number > 0 && number < 6) {
-            let updateState = {
-                [key]: number,
-                inRange: true
-            };
-            this.setState(updateState);
-            return;
-        }
-        else {
-            let updateState = {
-                ...this.state,
-                inRange: false
-            };
-            this.setState(updateState);
-            return;
-        }
+        this.setState(
+            this.props.numberChange(key, event.target.value)
+        );
     }
 
     handleSubmit = (event) => {

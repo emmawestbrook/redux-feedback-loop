@@ -16,6 +16,23 @@ import Review from '../Review/Review';
 class App extends Component {
 
 
+  numberChange = (key, num) => {
+    let number = Number(num);
+    if (number > 0 && number < 6) {
+      let updateState = {
+        [key]: number,
+        inRange: true
+      };
+      return updateState;
+    }
+    else {
+      let updateState = {
+        ...this.state,
+        inRange: false
+      };
+      return updateState;
+    }
+  }
 
   render() {
     return (
@@ -31,19 +48,19 @@ class App extends Component {
             </Route>
 
             <Route path="/feeling">
-              <Feeling />
+              <Feeling numberChange={this.numberChange} />
             </Route>
 
             <Route path="/understanding">
-              <Understanding />
+              <Understanding numberChange={this.numberChange} />
             </Route>
 
             <Route path="/support">
-              <Support />
+              <Support numberChange={this.numberChange} />
             </Route>
 
             <Route path="/comment">
-              <Comment />
+              <Comment numberChange={this.numberChange} />
             </Route>
 
             <Route path="/review">
