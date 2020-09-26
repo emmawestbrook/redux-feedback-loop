@@ -18,7 +18,6 @@ class Feeling extends Component {
                 inRange: true
             };
             this.setState(updateState);
-            console.log(updateState);
             return;
         }
         else {
@@ -27,7 +26,6 @@ class Feeling extends Component {
                 inRange: false
             };
             this.setState(updateState);
-            console.log(updateState);
             return;
         }
     }
@@ -47,6 +45,7 @@ class Feeling extends Component {
                 <h1>how are you feeling today?</h1>
                 <input type="number" placeholder="enter a number between 1-5"
                     onChange={(event) => this.handleChange('feeling', event)}></input>
+                <br />
                 { this.state.inRange ?
                     <button type="submit" onClick={this.handleSubmit}>next</button> :
                     <p>please enter a number between 1 and 5!</p>

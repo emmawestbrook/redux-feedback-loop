@@ -20,7 +20,7 @@ Four Routes/Views
 
 ### Feeling
     x Make route 
-    - Check to make sure number is between 1-5
+    x Check to make sure number is between 1-5
     x Integer entry (1-5) that dispatches to redux state
     x Next button sends to next form
 ### Understanding
