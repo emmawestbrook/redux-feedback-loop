@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from "react-redux";
 import Button from '@material-ui/core/Button';
+import { TextField } from '@material-ui/core';
 
 class Comment extends Component {
     state = {
@@ -26,8 +27,8 @@ class Comment extends Component {
         return (
             <div >
                 <h1>any additional comments?</h1>
-                <input type="tezt" placeholder="let us know!"
-                    onChange={(event) => this.handleChange('comment', event)}></input>
+                <TextField type="text" variant="outlined" color="secondary" placeholder="let us know!" multiline rows={3}
+                    onChange={(event) => this.handleChange('comment', event)}></TextField>
                 <br />
                 <br />
                 <Button variant="contained" color="primary" type="submit" onClick={this.handleSubmit}>next</Button>

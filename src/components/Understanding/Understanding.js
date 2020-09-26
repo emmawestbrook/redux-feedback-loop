@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from "react-redux";
 import Button from '@material-ui/core/Button';
+import { TextField } from '@material-ui/core';
+
 
 class Understanding extends Component {
     state = {
@@ -28,8 +30,8 @@ class Understanding extends Component {
         return (
             <div >
                 <h1>how well are you understanding the content?</h1>
-                <input type="number" placeholder="enter a number between 1-5"
-                    onChange={(event) => this.handleChange('understanding', event)}></input>
+                <TextField variant="outlined" type="number" color="secondary" placeholder="rate 1-5"
+                    onChange={(event) => this.handleChange('understanding', event)}></TextField>
                 <br />
                 <br />
                 { this.state.inRange ?

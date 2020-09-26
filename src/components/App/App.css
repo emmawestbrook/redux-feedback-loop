@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #033076;
+  background-color: gray;
   min-height: 70px;
   padding: 20px;
   color: white;
@@ -17,4 +17,11 @@
   font-size: large;
 }
 
-
+.reviewCard {
+    width: 30%;
+    margin: auto;
+    padding: 20px;;
+}
+.reviewDiv {
+  height: 700px;
+}

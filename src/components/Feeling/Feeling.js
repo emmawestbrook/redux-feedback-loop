@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from "react-redux";
 import Button from '@material-ui/core/Button';
+import { TextField } from '@material-ui/core';
 
 
 
@@ -31,8 +32,11 @@ class Feeling extends Component {
         return (
             <div >
                 <h1>how are you feeling today?</h1>
-                <input type="number" placeholder="enter a number between 1-5"
-                    onChange={(event) => this.handleChange('feeling', event)}></input>
+
+                <TextField variant="outlined" type="number" color="secondary" placeholder="rate 1-5"
+                    onChange={(event) => this.handleChange('feeling', event)}></TextField>
+
+
                 <br />
                 <br />
                 { this.state.inRange ?

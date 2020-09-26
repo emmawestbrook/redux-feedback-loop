@@ -4,6 +4,7 @@ import './App.css';
 import ReactDOM from 'react-dom';
 import { Route, HashRouter as Router, Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
+import AppBar from '@material-ui/core/AppBar';
 
 //importing all the other components!
 import Feeling from '../Feeling/Feeling';
@@ -12,6 +13,7 @@ import Support from '../Support/Support';
 import Comment from '../Comment/Comment';
 import Review from '../Review/Review';
 import Home from '../Home/Home';
+import { Toolbar } from '@material-ui/core';
 
 class App extends Component {
 
@@ -40,10 +42,12 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <header className="App-header">
-            <h1 className="App-title">Feedback!</h1>
-            <h4><i>Don't forget it!</i></h4>
-          </header>
+          <AppBar position="static" className="App-header">
+            <Toolbar variant="dense">
+              <h1 className="App-title">feedback</h1>
+            </Toolbar>
+
+          </AppBar>
           <main>
             <Route path="/" exact>
               <Home />

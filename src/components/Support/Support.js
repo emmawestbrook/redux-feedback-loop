@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from "react-redux";
+import { TextField } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
-
 
 
 class Support extends Component {
@@ -30,8 +30,8 @@ class Support extends Component {
         return (
             <div >
                 <h1>how well are you being supported?</h1>
-                <input type="number" placeholder="enter a number between 1-5"
-                    onChange={(event) => this.handleChange('support', event)}></input>
+                <TextField variant="outlined" type="number" color="secondary" placeholder="rate 1-5"
+                    onChange={(event) => this.handleChange('support', event)}></TextField>
                 <br />
                 <br />
                 { this.state.inRange ?
