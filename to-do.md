@@ -19,25 +19,26 @@
 Four Routes/Views
 
 ### Feeling
-    - Make route 
+    x Make route 
     - Check to make sure number is between 1-5
     - Integer entry (1-5) that dispatches to redux state
     - Next button sends to next form
 ### Understanding
-    - Make route 
+    x Make route 
     - Check to make sure number is between 1-5
     - Integer entry (1-5) that dispatches to redux state
     - Next button sends to next form
 ### Support
-    - Make route 
+    x Make route 
     - Check to make sure number is between 1-5
     - Integer entry (1-5) that dispatches to redux state
     - Next button sends to next form
 ### Comment
-    - Make route 
+    x Make route 
     - Text entry that dispatches to redux state
     - Next button sends to next form
 ### Review
+    x Make Route
     - Render all feedback information form redux state
     - Submit button sends all info to database via axios POST and empties redux state
 ### Submission success page

@@ -1,20 +1,29 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import { connect } from "react-redux";
+
 
 
 class Feeling extends Component {
+
     handleSubmit = () => {
         this.props.history.push('/understanding');
     }
     render() {
         return (
             <div >
-                <p>feeling</p>
+                <h1>how are you feeling today?</h1>
+                <input type="number" placeholder="enter a number between 1-5"></input>
                 <button type="submit" onClick={this.handleSubmit}>next</button>
+
 
             </div>
         );
     }
 }
 
-export default withRouter(Feeling);
+const reduxStateProps = (reduxState) => ({
+    feedback: reduxState.feedbackReducer
+});
+
+export default connect(reduxStateProps)(withRouter(Feeling));
