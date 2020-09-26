@@ -5,13 +5,31 @@ import { connect } from "react-redux";
 
 
 class Feeling extends Component {
+    state = {
+        feeling: null,
+        inRange: false
+    };
 
-    state = { feeling: null, };
-
-    handleChange = (event) => {
-        this.setState({
-            feeling: Number(event.target.value)
-        });
+    handleChange = (key, event) => {
+        let number = Number(event.target.value);
+        if (number > 0 && number < 6) {
+            let updateState = {
+                [key]: number,
+                inRange: true
+            };
+            this.setState(updateState);
+            console.log(updateState);
+            return;
+        }
+        else {
+            let updateState = {
+                ...this.state,
+                inRange: false
+            };
+            this.setState(updateState);
+            console.log(updateState);
+            return;
+        }
     }
 
     handleSubmit = (event) => {
@@ -28,10 +46,11 @@ class Feeling extends Component {
             <div >
                 <h1>how are you feeling today?</h1>
                 <input type="number" placeholder="enter a number between 1-5"
-                    onChange={(event) => this.handleChange(event)}></input>
-                <button type="submit" onClick={this.handleSubmit}>next</button>
-
-
+                    onChange={(event) => this.handleChange('feeling', event)}></input>
+                { this.state.inRange ?
+                    <button type="submit" onClick={this.handleSubmit}>next</button> :
+                    <p>please enter a number between 1 and 5!</p>
+                }
             </div>
         );
     }
