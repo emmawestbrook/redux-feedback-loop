@@ -4,6 +4,8 @@ import './App.css';
 import ReactDOM from 'react-dom';
 //import Button from '@material-ui/core/Button';
 import { Route, HashRouter as Router, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+
 
 import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
@@ -12,6 +14,9 @@ import Comment from '../Comment/Comment';
 import Review from '../Review/Review';
 
 class App extends Component {
+
+
+
   render() {
     return (
       <Router>
@@ -44,8 +49,6 @@ class App extends Component {
             <Route path="/review">
               <Review />
             </Route>
-
-            <button>{/* <Link to="/order">NEXT</Link> */}</button>
           </main>
         </div>
       </Router>
