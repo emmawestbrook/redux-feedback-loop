@@ -9,6 +9,7 @@ import { Paper } from '@material-ui/core';
 class Review extends Component {
 
     handleSubmit = () => {
+        alert("thanks for your feedback!");
         axios({
             method: "POST",
             url: "/feedback",
@@ -23,9 +24,9 @@ class Review extends Component {
         });
         this.props.history.push('/');
     }
+
     handleClick = (route) => {
         this.props.history.push(route);
-
     }
 
     render() {
